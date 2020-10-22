@@ -3,18 +3,30 @@ import './player.css';
 
 class Player extends React.Component{
 
-    state = { player1:{name:"Naruto",score:0},player2:{name:"Sasuke",score:0} }
+    constructor(props)
+    {
+        super(props);
+    }
+
+    renderMessage = ()=>
+    {
+       if(this.props.winningPlayer){    
+        return <p className="message">{this.props.winningPlayer} wins!<br></br>Press Reset button to play again.</p>
+       }
+    }
+
     render()
     {
         return (
-            <div class="players">
-               <div id="player1">
-                   {this.state.player1.name}<br></br><hr></hr>
-                   {this.state.player1.score}
+            <div className="players">
+               <div className={(this.props.currentValue === 'X' ? 'chance' : '')} id="player1">
+                    Player 1(X)<br></br><hr></hr>
+                   {this.props.score.Player1}
                </div>
-               <div id="player2">
-                    {this.state.player2.name}<br></br><hr></hr>
-                    {this.state.player2.score}
+               { this.renderMessage() }
+               <div className={(this.props.currentValue === 'O' ? 'chance' : '')} id="player2">
+                    Player 2(O)<br></br><hr></hr>
+                    {this.props.score.Player2}
                </div>
             </div>
         );
