@@ -1,0 +1,35 @@
+.box button{
+    color: white;
+    font-size: 22px;
+    background-color: #1f1f70;
+    height: 50px;
+    width: 64px;
+    outline: none;
+    border: .5px solid black;
+}
+
+button:hover{
+    background-color:white;
+    color: #1f1f70;
+    transition: ease-in .12s;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#reset{
+    height: 22px;
+    font-size: 10px;
+    background: #40b840;
+    color: white;
+    outline: none;
+    border: none;
+    margin: -20px -20px;
+    position: relative;
+    left: 50%;
+}

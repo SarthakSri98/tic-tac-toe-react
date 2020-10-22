@@ -1,0 +1,13 @@
+h3{
+    text-align: center;
+}
+
+
+.board{
+    height: 250px;
+    width: 46%;
+    padding: 10px;
+    box-shadow: 2px 2px 6px #9a7474;
+    /* background-color: red; */
+    margin: 0 auto;
+}
